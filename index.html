@@ -1,0 +1,276 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="lib/csshake.css" />
+		<title>Document</title>
+		<style></style>
+		<script src="lib/flexible.js"></script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	</head>
+
+	<body>
+		<!--loader-->
+	      <div id="loading">
+			<div id="loading-center">
+				<div id="loading-center-absolute">
+					<div class="object"></div>
+					<div class="object"></div>
+					<div class="object"></div>
+					<div class="object"></div>
+					<div class="object"></div>
+					<div class="object"></div>
+					<div class="object"></div>
+					<div class="object"></div>
+					<div class="object"></div>
+					<div class="object"></div>
+				</div>
+			</div>
+
+		</div>
+		
+		<!--弹幕-->
+		<audio id="dmMp3" src="music/dm.mp3"></audio>
+		<!--背景音乐-->
+		<audio id="bgMp3" src="music/bg.wav" loop="loop"></audio>
+		<!--插画音乐-->
+		<audio id="chMp3" src="music/ch.mp3" loop="loop"></audio>
+		<!--瓶盖-->
+		<audio id="pgMp3" src="music/pg.mp3" loop="loop"></audio>
+		<!--二胎-->
+		<audio id="etMp3" src="music/et.mp3"></audio>
+		<!--对象-->
+		<audio id="dxMp3" src="music/dx.mp3"></audio>
+		<!--按钮-->
+		<audio id="anMp3" src="music/an.mp3"></audio>
+		<!--boom-->
+		<audio id="boomMp3" src="music/boom.mp3"></audio>
+		<!--工资-->
+		<audio id="gzMp3" src="music/gz.mp3"></audio>
+		<!--工资A-->
+		<audio id="gzA" src="music/gzA.mp3"></audio>
+		<!--工资B-->
+		<audio id="gzB" src="music/gzB.mp3"></audio>
+		<!--工资C-->
+		<audio id="gzC" src="music/gzC.mp3"></audio>
+		<!--工资D-->
+		<audio id="gzD" src="music/gzD.mp3"></audio>
+		<!--工资-->
+		<audio id="gzMp3" src="music/gz.mp3"></audio>
+		<!--对象A-->
+		<audio id="dxA" src="music/dxA.mp3"></audio>
+		<!--对象B-->
+		<audio id="dxB" src="music/dxB.mp3"></audio>
+		<!--对象C-->
+		<audio id="dxC" src="music/dxC.mp3"></audio>
+		<!--对象D-->
+		<audio id="dxD" src="music/dxD.mp3"></audio>
+		<!--二胎A-->
+		<audio id="etA" src="music/etA.mp3"></audio>
+		<!--二胎B-->
+		<audio id="etB" src="music/etB.mp3"></audio>
+		<!--二胎C-->
+		<audio id="etC" src="music/etC.mp3"></audio>
+		<!--二胎D-->
+		<audio id="etD" src="music/etD.mp3"></audio>
+		<!--乌鸦-->
+		<audio id="wyC" src="music/wy.mp3"></audio>
+		<!--乌鸦-->
+		<audio id="qh" src="music/qh.mp3"></audio>
+		
+		<!--36片头-->
+		<audio id="piantou" src="music/36tou.mp3"></audio>
+		<audio id="tsj" src="music/tsj.mp3"></audio>
+		<audio id="fjj" src="music/fjj.mp3"></audio>
+		<audio id="zxj" src="music/zxj.mp3"></audio>
+		
+		
+		<div class="warp">
+			<!--弹幕-->
+			<div class="danmu">
+				<div class="danmuWarp">
+					<!--弹幕Mask-->
+					<div class="dmMask"></div>
+					<ul class="dmList">
+						<li class="orange o13">阿姨办公室那小王条件可好了,要不要......</li>
+						<li class="orange o14">听说隔壁老王的儿媳妇怀二胎了！</li>
+						<li class="orange o10">呦,大侄子还单着呢?</li>
+						<li class="orange o1">现在在哪上班呢?</li>
+						<li class="orange o9">买了几套房了??????</li>
+						<li class="orange o2">有多少存款了?</li>
+						<li class="orange o3">呦,姑娘又胖了吧。</li>
+						<li class="orange o12">IT不少赚钱吧，什么时候孝敬孝敬你大爷</li>
+						<li class="orange o4">什么时候要二胎呀?</li>
+						<li class="orange o5">一个月工资多少呀?</li>
+						<li class="orange o6">准备找什么工作?????</li>
+						<li class="orange o7">北京漂的咋样呀?</li>
+						<li class="orange o10">呦,大侄子还单着呢?</li>
+						<li class="orange o9">买了几套房了??????</li>
+						<li class="orange o8">考试考了多少分呀!!!!!!</li>
+						<li class="orange o9">买了几套房了??????</li>
+						<li class="orange o10">呦,大侄子还单着呢?</li>
+						<li class="orange o3">呦,姑娘又胖了吧。</li>
+						<li class="orange o12">IT不少赚钱吧，什么时候孝敬孝敬你大爷</li>
+						<li class="orange o4">什么时候要二胎呀?</li>
+						<li class="orange o5">一个月工资多少呀?</li>
+						<li class="orange o6">准备找什么工作?????</li>
+						<li class="orange o7">北京漂的咋样呀?</li>
+						<li class="orange o9">买了几套房了??????</li>
+						<li class="orange o2">有多少存款了?</li>
+						<li class="orange o3">呦,姑娘又胖了吧。</li>
+						<li class="orange o12">IT不少赚钱吧，什么时候孝敬孝敬你大爷</li>
+						<li class="orange o4">什么时候要二胎呀?</li>
+						<li class="orange o5">一个月工资多少呀?</li>
+					</ul>
+				</div>
+			</div>
+			<!--爆炸-->
+			<div class="bz" id="container">
+				<img class="bzbz" src="images/bz.jpg" />
+			</div>
+			
+			<img class="xx" src="images/xx.png"/>
+			<!--三十六计首页-->
+			<div class="sslj">
+				<img class="ssljTitle" src="images/title.png" />
+				<img class="ssljG" src="images/g.png" />
+				<ul class="sjljBtn">
+					<li><img src="images/btn01.png" /></li>
+					<li><img src="images/btn02.png" /></li>
+					<li><img src="images/btn03.png" /></li>
+				</ul>
+			</div>
+
+			<!--没钱对话-->
+			<div class="mq" id="mq">
+				<!--<div class="mqMask"></div>-->
+				<div class="dhmask"><!--<img src="images/dhmask.png"/>--></div>
+				<!--对话图片-->
+				<img class="mq01" src="images/mq01.png" />
+				<img class="mq03" src="images/mq03.png" />
+				<img class="mq02" src="images/mq02.png" />
+				<img class="mq04" src="images/mq04.png" />
+				<!--<img class="last01" src="images/last01.png" />-->
+				<div class="renwugd" id="mqgd">
+					<img class="renwubg" src="images/renwubg.jpg"/>
+					<img class="mqbg" src="images/mqbg.png"/>
+				</div>
+				
+			</div>
+			<!--没钱计-->
+			<div class="mqj" id="mqj">
+				<img class="mqjbg" src="images/mqj.jpg"/>
+				<!--要保存的图片-->
+				<img class="mqiqianjitp" src="images/tangsengji.jpg"/>
+				<ul class="pubBtns">
+					<li></li>
+					<li onclick="cj()"></li>
+				</ul>
+			</div>
+			
+			<!--没对象对话-->
+			<div class="mq" id="met">
+				<!--<div class="mqMask"></div>-->
+				<div class="dhmask"><!--<img src="images/dhmask.png"/>--></div>
+				
+				<!--对话图片-->
+				<img class="mq01" src="images/met01.png" />
+				<img class="mq02" src="images/met02.png" />
+				<img class="mq03" src="images/met03.png" />
+				<img class="mq04" src="images/met04.png" />
+				<!--<img class="last02" src="images/last02.png" />-->
+				<div class="renwugd" id="dxgd">
+					<img class="renwubg" src="images/renwubg.jpg"/>
+					<img class="mqbg" src="images/mdxbg.png"/>
+				</div>
+			</div>
+			<div class="mqj" id="mdxj">
+				<img class="mqjbg" src="images/mdx.jpg"/>
+				<!--要保存的图片-->
+				<img class="mqiqianjitp" src="images/fanjianji.jpg"/>
+				<ul class="pubBtns">
+					<li></li>
+					<li onclick="cj()"></li>
+				</ul>
+			</div>
+			
+			<!--没二胎对话-->
+			<div class="mq" id="mdx">
+				<!--<div class="mqMask"></div>-->
+				<div class="dhmask"><!--<img src="images/dhmask.png"/>--></div>
+				
+				<!--对话图片-->
+				<img class="mq01" src="images/mdx01.png" />
+				<img class="mq02" src="images/mdx02.png" />
+				<img class="mq03" src="images/mdx03.png" />
+				<img class="mq04" src="images/mdx04.png" />
+				<!--<img class="last03" src="images/last03.png" />-->
+				<div class="renwugd" id="metgd">
+					<img class="renwubg" src="images/renwubg.jpg"/>
+					<img class="mqbg" src="images/metbg.png"/>
+				</div>
+			</div>
+			<div class="mqj" id="metj">
+				<img class="mqjbg" src="images/met.jpg"/>
+				<!--要保存的图片-->
+				<img class="mqiqianjitp" src="images/zhaxinji.jpg"/>
+				<ul class="pubBtns">
+					<li></li>
+					<li onclick="cj()"></li>
+				</ul>
+			</div>
+			
+			<!--对话完成的拧盖子-->
+			<!--<div class="nyn">
+				<img class="t" src="images/T.png"/>
+				<div class="pzBox">
+					<img class="shou" src="images/shou.png" />
+					<img class="ts shake-little shake-constant" src="images/ts.png"/>
+					<img class="pzzz" src="images/pz.png" />
+					<img class="gaizin" src="images/gaizi.png"/>
+				</div>
+			</div>-->
+			
+			<div class="fanshu">
+				<img src="images/fanye.jpg"/>
+			</div>
+	
+			<!--过渡-->
+			<div class="gd">
+				<div class="gdWarp">
+					<img class="gaize" src="images/gaizi.png"/>
+					<img class="pingzi" src="images/pingzi.png"/>
+					<!--<img class="gai01" src="images/gai01.png"/>-->
+					<!--<img class="gai02" src="images/gai02.png"/>-->
+					<img class="gai03" src="images/pingzi03.png"/>
+				</div>
+			</div>
+
+		</div>
+		
+		<!--抽奖-->
+		<div class="cj">
+			<div class="cjWarp">
+				<ul>
+					<li><img src="images/f.png"/></li>
+					<li><img src="images/h.png"/></li>
+					<li><img src="images/b.png"/></li>
+				</ul>
+				<img class="sjbg" src="images/sjbg.jpg"/>
+			</div>
+		</div>
+
+		<!--指南-->
+		<div class="smzn">
+			<!--<img src="images/zhinan.jpg"/>-->
+			<img class="ssmm" src="images/ssmm.png"/>
+			<div class="bbgg"></div>
+		</div>		
+	
+		<script src="js/index.js"></script>
+	</body>
+
+</html>

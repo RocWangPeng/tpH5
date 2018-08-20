@@ -1,0 +1,1109 @@
+@r: 75rem;
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    perspective: 700;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -ms-perspective: 1000px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform-origin: left bottom;
+}
+
+.book {
+    transform: rotateY(-180deg);
+    transition-duration: 3.5s;
+}
+
+#loading {
+    //  background-color: #45b29d;
+    //background: rgba(0,0,0,.5);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    margin-top: 0px;
+    top: 0px;
+}
+
+#loading-center {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 50px;
+    width: 150px;
+    margin-top: -25px;
+    margin-left: -75px;
+}
+
+.object {
+    width: 8px;
+    height: 50px;
+    margin-right: 5px;
+    background-color: #FFF;
+    -webkit-animation: animate 1s infinite;
+    animation: animate 1s infinite;
+    float: left;
+}
+
+.object:last-child {
+    margin-right: 0px;
+}
+
+.object:nth-child(10) {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+.object:nth-child(9) {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.object:nth-child(8) {
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+
+.object:nth-child(7) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.object:nth-child(6) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.object:nth-child(5) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.object:nth-child(4) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.object:nth-child(3) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.object:nth-child(2) {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+@-webkit-keyframes animate {
+    50% {
+        -ms-transform: scaleY(0);
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+}
+
+@keyframes animate {
+    50% {
+        -ms-transform: scaleY(0);
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+    }
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: black;
+}
+
+.warp {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.danmu {
+    width: 100%;
+    height: 100%;
+    background: url(../images/dmBg.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+//.last01,
+//.last02,
+//.last03 {
+//  position: absolute;
+//  top: 70/@r;
+//  left: 50%;
+//  margin-left: -316/@r;
+//  width: 632/@r;
+//}
+.danmuWarp {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#loading {
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+}
+
+#loading .loader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.danmu .dmMask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/mask.png) no-repeat;
+    background-size: cover;
+    transition: 2s;
+    animation: dmMask 2.5s;
+}
+
+// dm
+@keyframes dmMask {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.danmu .dmList {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.danmu .dmList li {
+    height: 74/@r;
+    font-size: 38/@r;
+    line-height: 74/@r;
+    text-align: center;
+    padding: 0 22/@r;
+    color: #4b060e;
+    position: relative;
+    margin-bottom: 13/@r;
+    display: inline-block;
+    left: 100%;
+}
+
+.danmu .dmList li.orange {
+    background: #ffc801;
+    border: 2/@r solid #ea6512;
+    border-radius: 10/@r;
+}
+
+//
+//.danmu .dmList li:nth-child(1) {
+//  top: 32/@r;
+//  animation: danmu 3s linear infinite;
+//}
+//
+//.danmu .dmList li:nth-child(2) {
+//  top: 135/@r;
+//  height: 64/@r;
+//  line-height: 64/@r;
+//  background: #ffffff;
+//  animation: danmu 2.5s linear 0.5s infinite;
+//}
+//
+//.danmu .dmList li:nth-child(3) {
+//  height: 54/@r;
+//  line-height: 54/@r;
+//  top: 200/@r;
+//  animation: danmu 2.5s linear 0s infinite;
+//}
+//
+//.danmu .dmList li:nth-child(4) {
+//  animation: danmu 2.5s linear 0s infinite;
+//  top: 202/@r;
+//  left: 400/@r;
+//}
+//
+//.danmu .dmList li:nth-child(5) {
+//  animation: danmu 2.5s linear 0.5s infinite;
+//  top: 346/@r;
+//  background: #ffffff;
+//  height: 54/@r;
+//  line-height: 54/@r;
+//}
+//
+//.danmu .dmList li:nth-child(6) {
+//  animation: danmu 2s linear 2s infinite;
+//  top: 380/@r;
+//  background: #ffffff;
+//  height: 64/@r;
+//  line-height: 64/@r;
+//}
+//
+//.danmu .dmList li:nth-child(7) {
+//  animation: danmu 3.5s ease-out 4s infinite;
+//  top: 440/@r;
+//}
+//
+//.danmu .dmList li:nth-child(8) {
+//  animation: danmu 3s linear 0.5s infinite;
+//  top: 540/@r;
+//  background: #ffffff;
+//}
+//
+//.danmu .dmList li:nth-child(9) {
+//  animation: danmu 3s linear 3s infinite;
+//  top: 220/@r;
+//  background: #ffffff;
+//}
+//
+//.danmu .dmList li:nth-child(10) {
+//  animation: danmu 3.5s linear 0.5s infinite;
+//  top: 600/@r;
+//  height: 54/@r;
+//  line-height: 54/@r;
+//}
+//
+//.danmu .dmList li:nth-child(11) {
+//  animation: danmu 3.5s linear 0s infinite;
+//  top: 300/@r;
+//  background: #ffffff;
+//}
+//
+//.danmu .dmList li:nth-child(12) {
+//  animation: danmu 3s linear 3s infinite;
+//  top: 650/@r;
+//}
+//
+//.danmu .dmList li:nth-child(13) {
+//  top: 580/@r;
+//  animation: danmu 5s linear 0s infinite;
+//  background: #ffffff;
+//  height: 64/@r;
+//  line-height: 64/@r;
+//}
+.danmu .dmList li:nth-child(2n) {
+    animation: danmu 3.5s 1s linear infinite;
+}
+
+.danmu .dmList li:nth-child(3n) {
+    animation: danmu 2s .6s linear infinite;
+}
+
+.danmu .dmList li:nth-child(4n) {
+    animation: danmu 3.5s .2s linear infinite;
+    background: #fff;
+}
+
+.danmu .dmList li:nth-child(5n) {
+    animation: danmu 3s .2s linear infinite;
+    transform: translateY(200/@r);
+}
+
+.danmu .dmList li:nth-child(6n) {
+    animation: danmu 2.6s .2s linear infinite;
+    transform: translateX(200/@r);
+}
+
+@keyframes dmMove {
+    from {
+        // left:100%;
+        transform: translate3d(100%, 0, 0);
+    }
+    to {
+        // left:0;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes danmu {
+    from {
+        //   left: 100%;
+        transform: translateX(0);
+    }
+    to {
+        //   left: 0;
+        transform: translateX(-350%);
+    }
+}
+
+//////
+canvas {
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+}
+
+//      img {
+//          position: absolute;
+//          cursor: pointer;
+//      }
+///////
+//爆炸
+.bz {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .5;
+    transition: 2s;
+    transform: scale(0);
+    //  transform-origin: center center;
+    z-index: 9;
+    //  perspective: 800;
+    //  -webkit-perspective: 800; /* Safari 和 Chrome */
+}
+
+.bz img {
+    width: 100%;
+    height: 100%;
+}
+
+.xx {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0.1;
+    z-index: 9;
+    transition: 1s ease-in-out;
+}
+
+@keyframes sc {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(2)
+    }
+    100% {
+        transform: scale(0.9)
+    }
+}
+
+//三十六计
+.sslj {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/sjljbg.jpg) no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    transition: .8s;
+    z-index: 8;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.ssljTitle {
+    display: block;
+    width: 515/@r;
+    margin: 0 auto;
+    margin-top: 140/@r;
+}
+
+.ssljG {
+    display: block;
+    width: 430/@r;
+    margin: 0 auto;
+    margin-top: 40/@r;
+    animation: ani 3s linear infinite;
+}
+
+.sjljBtn {
+    display: flex;
+    padding-top: 60/@r;
+    width: 512/@r;
+    justify-content: space-between;
+    margin: 0 auto;
+    transition: .8s;
+}
+
+.sjljBtn li {
+    display: inline-block;
+    width: 160/@r;
+    transition: .5s;
+}
+
+.sjljBtn li img {
+    width: 100%;
+}
+
+@keyframes ani {
+    0 {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.mq {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../images/mqbg.jpg) no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    transition: .5s;
+    transform: scale(0);
+    z-index: 7;
+    //  transform: scale(1);
+    //  z-index: 5000;
+    //  display: none;
+}
+
+.mq .mq01 {
+    width: 260/@r;
+    position: absolute;
+    right: 10/@r;
+    top: 41.6%;
+}
+
+.mq .mq03 {
+    width: 260/@r;
+    position: absolute;
+    right: 180/@r;
+    top: 38.6%;
+}
+
+#met .mq03 {
+    width: 260/@r;
+    position: absolute;
+    right: 10/@r;
+    top: 41.6%;
+}
+
+.mq .mq02 {
+    top: 39.6%;
+    width: 260/@r;
+    position: absolute;
+    left: 10/@r;
+}
+
+.mq .mq04 {
+    width: 260/@r;
+    position: absolute;
+    right: 10/@r;
+    top: 41.6%;
+}
+
+.mqMask {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .5s;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 0 0% 120% 0;
+}
+
+.dhmask img {
+    width: 100%;
+    transform: scale(1) !important;
+}
+
+.mq img {
+    transform: scale(0);
+    transition: .5s;
+    transform-origin: bottom;
+}
+
+.mq .dhmask {
+    position: absolute;
+    width: 1500/@r;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    margin-left: -750/@r;
+    opacity: 0;
+    transition: .5s;
+    transform-origin: center top;
+    background: url(../images/dhmask.png) center top no-repeat;
+    transform: scale(0);
+    //  transform: translateX(20/@r);
+}
+
+.mqj {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../images/mqj.jpg) no-repeat;
+    background-size: 100% 100%;
+    transform: scale(0) rotateZ(60deg);
+    transition: .5s;
+    overflow: hidden;
+    z-index: 7;
+}
+
+.mqjbg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+    //  transform: scale(0);
+}
+
+.mqiqianjitp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+//}
+.pubBtns {
+    position: absolute;
+    bottom: 63/@r;
+    display: flex;
+    left: 50%;
+    width: 600/@r;
+    margin-left: -300/@r;
+    justify-content: space-between;
+}
+
+.pubBtns li:nth-child(1) {
+    width: 290/@r;
+    height: 120/@r;
+    background: url(../images/bcbtn.png) no-repeat;
+    background-size: contain;
+}
+
+.pubBtns li:nth-child(2) {
+    width: 270/@r;
+    height: 120/@r;
+    background: url(../images/cjbtn.png) no-repeat;
+    background-size: contain;
+}
+
+.pubBtns li img {
+    display: block;
+    width: 100%;
+}
+
+//没对象
+#mdx {
+    z-index: 6;
+    transform: scale(0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../images/mdxbg.jpg) no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 7;
+}
+
+#mdx .mq01 {
+    width: 260/@r;
+}
+
+#mdx .mq02 {
+    position: absolute;
+    width: 280/@r;
+    top: 40.6%;
+}
+
+#mdx .mq03 {
+    position: absolute;
+    width: 290/@r;
+    top: 40%;
+    left: 180/@r;
+}
+
+#mdx .mq04 {
+    position: absolute;
+    width: 280/@r;
+    top: 40%;
+    left: 6%;
+}
+
+#met {
+    transform: scale(0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../images/metbg.jpg) no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 7;
+}
+
+#met .mq12 {
+    width: 240/@r;
+    top: 38%;
+    right: 20/@r;
+}
+
+#met .mq02 {
+    position: absolute;
+    width: 260/@r;
+    top: 36.6%;
+    left: 100/@r;
+}
+
+#met .mq04 {
+    width: 260/@r;
+    position: absolute;
+    left: 10/@r;
+    top: 41.6%;
+}
+
+//拧一拧
+.nyn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/nyn.jpg) no-repeat;
+    background-size: 100% 100%;
+    z-index: 6;
+    transition: .5s;
+    transform: scale(0);
+}
+
+.fanshu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    //  background: url(../images/nyn.jpg) no-repeat;
+    background-size: 100% 100%;
+    z-index: 6;
+    transition: .5s;
+    transform: scale(0);
+    width: 100%;
+    height: 100%;
+    perspective: 700;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -ms-perspective: 1000px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.fanshu img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform-origin: left bottom;
+}
+
+.book {
+    transform: rotateY(-180deg);
+    transition-duration: 3.5s;
+}
+
+.nyn .t {
+    position: absolute;
+    left: -136/@r;
+    top: -98/@r;
+    width: 549/@r;
+    height: 387/@r;
+    animation: tmove 1s ease-in-out infinite;
+}
+
+@keyframes tmove {
+    0% {
+        transform: translateY(0@r)
+    }
+    50% {
+        transform: translateY(20/@r)
+    }
+    100% {
+        transform: translateY(0/@r)
+    }
+}
+
+.pzBox {
+    width: 518/@r;
+    height: 867/@r;
+    position: absolute;
+    top: 196/@r;
+    right: 40/@r;
+}
+
+.pzBox .pzzz {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.pzBox .gaizin {
+    position: absolute;
+    width: 110/@r;
+    left: -16/@r;
+    top: 182/@r;
+    //  animation: gaizi 2s infinite;
+}
+
+.pzBox .shou {
+    position: absolute;
+    width: 248/@r;
+    height: 192/@r;
+    top: 80/@r;
+    left: -15/@r;
+    //  transition: 1s ease-out;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    //  transform: rotateY(40deg) rotateZ(5deg); 
+    //  animation: shou 2s infinite;
+    z-index: 3;
+}
+
+.pzBox .ts {
+    position: absolute;
+    width: 358/@r;
+    right: -8/@r;
+    top: 0/@r;
+    z-index: 7;
+}
+
+@keyframes shou {
+    0 {
+        transform: rotateY(0) rotateZ(0);
+    }
+    50% {
+        transform: rotateY(40deg) rotateZ(5deg);
+    }
+    100% {
+        transform: rotateY(0) rotateZ(0);
+    }
+}
+
+.gd {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(../images/bdbg.jpg) no-repeat;
+    background-size: 100% 100%;
+    z-index: 50;
+    display: none;
+}
+
+.gdWarp {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.gdWarp .gaize {
+    position: absolute;
+    left: 195/@r;
+    top: 252/@r;
+    width: 121/@r;
+    height: 109/@r;
+    z-index: 2;
+    //  transition: .5s;
+    //  perspective: 800px;
+    transform-style: preserve-3d;
+    animation: gaizi 2s infinite;
+    transition: .5s;
+}
+
+.gdWarp .pingzi {
+    position: absolute;
+    left: 209/@r;
+    top: 320/@r;
+    width: 337/@r;
+    height: 797/@r;
+}
+
+.gai01 {
+    width: 122/@r;
+    height: 103/@r;
+    position: absolute;
+    left: 195/@r;
+    top: 252/@r;
+    opacity: 0;
+    //  animation: fei .6s infinite;
+}
+
+.gai02 {
+    width: 137/@r;
+    height: 133/@r;
+    position: absolute;
+    left: 95/@r;
+    top: 252/@r;
+    opacity: 0;
+    //  animation: fei 1s infinite ease-in-out;
+}
+
+.gai03 {
+    width: 332/@r;
+    height: 177/@r;
+    position: absolute;
+    left: 160/@r;
+    top: 222/@r;
+    opacity: 0;
+    //  animation: fei .8s infinite ease-out;
+}
+
+@keyframes fei {
+    from {
+        opacity: .3;
+        left: 160/@r;
+        top: 252/@r;
+        //      transform: translate(0px, 0)
+    }
+    to {
+        opacity: 1;
+        left: 2500/@r;
+        top: 0/@r;
+        transform: translate(0px, -200px);
+    }
+}
+
+@keyframes fei2 {
+    0 {
+        opacity: .6;
+        left: 195/@r;
+        top: 252/@r;
+    }
+    100% {
+        opacity: 1;
+        left: 995/@r;
+        top: 52/@r;
+    }
+}
+
+@keyframes gaizi {
+    0 {
+        transform: rotateY(0) scale(1);
+    }
+    50% {
+        transform: rotateY(40deg) scaleX(1);
+    }
+    100% {
+        transform: rotateY(0) scale(1);
+    }
+}
+
+.cj {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.cjWarp {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cjWarp .sjbg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.cjWarp ul {
+    position: absolute;
+    top: 23%;
+    width: 500/@r;
+    left: 50%;
+    margin-left: -220/@r;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+@keyframes scale {
+    0 {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cjWarp li img {
+    width: 100%;
+    height: 100%;
+}
+
+.cjWarp ul li:nth-child(1) {
+    width: 134/@r;
+    height: 146/@r;
+    animation: scale 1s;
+}
+
+.cjWarp ul li:nth-child(2) {
+    width: 135/@r;
+    height: 143/@r;
+    animation: scale 1s .5s;
+}
+
+.cjWarp ul li:nth-child(3) {
+    width: 197/@r;
+    height: 156/@r;
+    animation: scale 1s 1s;
+}
+
+.renwugd img {
+    transform: scale(1);
+}
+
+.renwugd {
+    background: #f4c220;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: scale(0);
+    transition: .5s;
+    text-align: center;
+    overflow: hidden;
+    transform-origin: center center;
+}
+
+.renwugd .renwubg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: center center;
+    animation: renwubgMove 1s infinite;
+    perspective: 500;
+}
+
+@keyframes renwubgMove {
+    //  0%{
+    //      transform: rotateZ(0.8);
+    //  }
+    50% {
+        transform: rotateZ(-10deg) scale(1.5);
+    }
+    100% {
+        transform: rotateZ(10deg) scale(3);
+    }
+}
+
+.renwugd .mqbg {
+    position: absolute;
+    width: 618/@r;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.smzn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    //  background: black;
+    transform: scale(0);
+    transform-origin: center;
+    opacity: .2;
+    //  perspective: 800;
+}
+
+.smzn img {
+    display: block;
+    //  width: 100%;
+    //  height: 100%;
+    width: 504/@r;
+    //  transition: 1s;
+    //  transform: translateZ(-80px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 2;
+}
+
+.bbgg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: black;
+    transition: 2.5s;
+    opacity: .2;
+    transform: scale(0);
+    transform-origin: center;
+}
